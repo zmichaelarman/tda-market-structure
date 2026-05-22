@@ -3,6 +3,9 @@ Applying persistent homology to equity return data to detect topological signatu
 
 Work in Progress
 
+Note to recruiters: 
+Will officially publish work in near future, send me an email if you would like to take a look at what I have
+
 Edelsbrunner, H., Letscher, D., & Zomorodian, A. (2002). Topological persistence
 and simplification. *Discrete & Computational Geometry*, 28(4), 511–533.
 https://doi.org/10.1007/s00454-002-2885-2
