@@ -38,24 +38,6 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 **Persistent homology.** We compute the Vietoris-Rips filtration on $X_t$ using [Ripser](https://github.com/scikit-tda/ripser.py) — the same class of filtration used in ATEAMS for homological percolation on lattice complexes. The output is a persistence diagram $\text{PD}(X_t)$ encoding the birth and death of topological features across scales.
 
-**Feature extraction.** From each persistence diagram we extract:
-
-| Feature | Definition |
-|---|---|
-| $\beta_1$ (Betti number) | Number of H1 bars (independent loops) |
-| H1 total persistence | $\sum (d_i - b_i)$ over all H1 bars |
-| H1 max persistence | $\max(d_i - b_i)$ |
-| H1 persistence entropy | $-\sum p_i \log p_i$, where $p_i = (d_i - b_i) / \text{total}$ |
-| H0 total persistence | $\sum (d_i - b_i)$ over finite H0 bars |
-
-Each feature becomes a time series indexed by trading day.
-
-**Statistical testing.** Four test families with Benjamini-Hochberg FDR correction ($q = 0.05$):
-1. ADF stationarity tests
-2. Spearman lead-lag correlation (horizons: 0, 1, 5, 10, 21 days)
-3. Mann-Whitney U (inside vs outside stress periods)
-4. Granger causality (feature → forward realized volatility, max lag 21 days)
-
 ---
 
 ## Results
