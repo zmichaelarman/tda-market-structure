@@ -46,50 +46,6 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 ---
 
-## Project Structure
-
-```
-tda-market-structure/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── data/
-│   └── fetch.py              # Download + clean S&P 500 returns via yfinance
-│
-├── topology/
-│   └── pipeline.py           # Rolling point clouds → Vietoris-Rips → persistence diagrams
-│
-├── features/
-│   └── extract.py            # Persistence diagrams → topological feature time series
-│
-├── analysis/
-│   ├── validate.py           # Visual validation against stress events
-│   └── regimes.py            # Statistical tests: Spearman, Mann-Whitney, Granger
-│
-├── backtest/
-│   └── backtest.py           # Rule-based strategy + performance metrics (if signal found)
-│
-├── notebooks/
-│   └── results.ipynb         # Full visualizations: persistence diagrams, features, results
-│
-├── figures/                  # Generated plots (tracked in git)
-│   ├── validation_overview.png
-│   ├── validation_h1_focus.png
-│   ├── validation_stress_zoom.png
-│   └── backtest.png
-│
-└── data/                     # Generated data files (partially gitignored)
-    ├── features.csv
-    ├── results_spearman.csv
-    ├── results_mannwhitney.csv
-    ├── results_granger.csv
-    └── regime_report.txt
-```
-
----
-
 ## Installation
 
 **Requirements:** Python 3.9+
