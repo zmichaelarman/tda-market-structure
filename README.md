@@ -42,7 +42,7 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 ## Results
 
-*Results will be reported here upon completion of the full pipeline run. Both positive and null outcomes will be documented honestly. See [`data/regime_report.txt`](data/regime_report.txt) for the full statistical findings and [`notebooks/results.ipynb`](notebooks/results.ipynb) for visualizations.*
+*Results will be reported here upon completion of the full pipeline run. Both positive and null outcomes will be documented honestly.*
 
 ---
 
