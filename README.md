@@ -12,7 +12,7 @@ Most quantitative signals derived from equity data rely on statistical summaries
 
 The mathematical framework comes from **topological data analysis (TDA)**, specifically persistent homology. Given a rolling window of daily returns across a universe of stocks, we construct a point cloud in high-dimensional return space and compute its Vietoris-Rips filtration. The resulting persistence diagrams encode how the topological structure of the market — its connected components, loops, and higher-dimensional cycles — evolves through time.
 
-This project was inpspired from my research conducted at the [Mason Experimental Geometry Lab](https://megl.science.gmu.edu/), where similar mathematical machinery was applied to spin systems and percolation models in [ATEAMS](https://github.com/apizzimenti/ATEAMS). The translation from statistical physics to financial markets is the core intellectual contribution of this work.
+This project was inspired from my research conducted at the [Mason Experimental Geometry Lab](https://megl.science.gmu.edu/), where similar mathematical machinery was applied to spin systems and percolation models in [ATEAMS](https://github.com/apizzimenti/ATEAMS). The translation from statistical physics to financial markets is the core intellectual contribution of this work.
 
 ---
 
