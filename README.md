@@ -36,7 +36,7 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 **Point cloud construction.** For each trading day $t$, we take a rolling window of the previous $W = 30$ days of log returns across $N$ stocks. Each day becomes a point in $\mathbb{R}^N$, giving a point cloud $X_t \subset \mathbb{R}^N$ of 30 points. Returns are standardized per-stock within each window, and PCA reduces the ambient dimension to 10 components before computing persistence.
 
-**Persistent homology.** We compute the Vietoris-Rips filtration on $X_t$ using [Ripser](https://github.com/scikit-tda/ripser.py) — the same class of filtration used in ATEAMS for homological percolation on lattice complexes. The output is a persistence diagram $\text{PD}(X_t)$ encoding the birth and death of topological features across scales.
+**Persistent homology.** We compute the Vietoris-Rips filtration on $X_t$ using [Ripser](https://github.com/scikit-tda/ripser.py) which is the same class of filtration used in ATEAMS for homological percolation on lattice complexes. The output is a persistence diagram $\text{PD}(X_t)$ encoding the birth and death of topological features across scales.
 
 ---
 
@@ -139,7 +139,6 @@ Zomorodian, A., & Carlsson, G. (2005). Computing persistent homology. *Discrete 
 
 **Michael Arman**
 Mathematics, George Mason University (May 2026)
-Mason Experimental Geometry Lab — algebraic topology, homological percolation, high-performance simulation
 
 [LinkedIn](https://linkedin.com/in/zmichaelarman) · [GitHub](https://github.com/zmichaelarman) · zmichaelarman@gmail.com
 
