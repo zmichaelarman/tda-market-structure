@@ -2,15 +2,15 @@
 
 > Applying persistent homology to equity return data to detect topological signatures of market stress regimes.
 
-Investigating whether topological features of S&P 500 return point clouds predict volatility regimes — a bridge between algebraic topology research and quantitative finance. This project builds a rigorous end-to-end pipeline for extracting Betti number time series from equity returns and testing their predictive power over market drawdowns.
+Investigating whether topological features of S&P 500 return point clouds predict volatility regimes to create a bridge between algebraic topology research and quantitative finance. This project builds a rigorous end-to-end pipeline for extracting Betti number time series from equity returns and testing their predictive power over market drawdowns.
 
 ---
 
 ## Background
 
-Most quantitative signals derived from equity data rely on statistical summaries — correlations, volatility estimates, momentum factors. This project asks a different question: does the **shape** of the return distribution, as measured by algebraic topology, carry information about market structure that conventional methods miss?
+Most quantitative signals derived from equity data rely on statistical summaries like correlations, volatility estimates, momentum factors. This project asks a different question: does the **shape** of the return distribution, as measured by algebraic topology, carry information about market structure that conventional methods miss?
 
-The mathematical framework comes from **topological data analysis (TDA)**, specifically persistent homology. Given a rolling window of daily returns across a universe of stocks, we construct a point cloud in high-dimensional return space and compute its Vietoris-Rips filtration. The resulting persistence diagrams encode how the topological structure of the market — its connected components, loops, and higher-dimensional cycles — evolves through time.
+The mathematical framework comes from **topological data analysis (TDA)**, specifically persistent homology. Given a rolling window of daily returns across a universe of stocks, we construct a point cloud in high-dimensional return space and compute its Vietoris-Rips filtration. The resulting persistence diagrams encode how the topological structure of the market (aka its connected components, loops, and higher-dimensional cycles) evolves through time.
 
 This project was inspired from my research conducted at the [Mason Experimental Geometry Lab](https://megl.science.gmu.edu/), where similar mathematical machinery was applied to spin systems and percolation models in [ATEAMS](https://github.com/apizzimenti/ATEAMS). The translation from statistical physics to financial markets is the core intellectual contribution of this work.
 
@@ -105,7 +105,7 @@ Each script logs progress and expected runtime to the terminal.
 
 ## Related Work
 
-This project is a inspired from my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS) — a formally published open-source library for algebraic topology-enabled simulation of spin systems, developed at the Mason Experimental Geometry Lab. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
+This project is a inspired from my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS), which is a library for algebraic topology-enabled simulation of spin system. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
 
 ---
 
