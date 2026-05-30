@@ -123,7 +123,7 @@ topological features of the correlation matrix that Vietoris-Rips misses.
 
 We find no statistically significant predictive signal from persistent
 homology features of S&P 500 return point clouds over the period 2004–2024,
-using rigorous multiple comparison correction across four classes of
+using multiple comparison correction across four classes of
 statistical tests.
 
 This is a valid and informative scientific result. It does not rule out
