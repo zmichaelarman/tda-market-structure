@@ -60,15 +60,79 @@ consistent with noise rather than a genuine but weak signal.
 No feature showed statistically significant distributional differences
 between stress and non-stress periods after FDR correction.
 
-Visual inspection reveals
-occasional spikes in H1 features around stress events, but these are
-neither systematic nor consistent across the five stress periods tested.
+Visual inspection reveals occasional spikes in H1 features 
+around stress events, but these areneither systematic nor 
+consistent across the five stress periods tested.
 
 ### Granger Causality
 
 No feature was found to Granger-cause forward realized volatility or VIX
 after FDR correction. P-values at the best lag ranged from 0.08 to 0.74,
 none surviving correction.
+
+---
+
+## Discussion
+
+### Why the Null Result is Not Surprising
+
+The efficient market hypothesis predicts that any predictable signal in
+financial data will be arbitraged away once discovered. The results of
+Gidea and Katz (2018), while visually compelling, were based on a small
+number of events and did not apply the multiple comparison corrections
+that are standard in statistical testing. A more rigorous test on a larger
+dataset with formal correction finds no reliable signal.
+
+### Limitations and Alternative Hypotheses
+
+The negative result is specific to the methodology employed here. Several
+alternative approaches may yield different results and warrant investigation:
+
+**Alternative point cloud constructions:**
+- Correlation matrix entries as the point cloud (rather than return vectors)
+- Sliding windows over intraday data rather than daily returns
+- Alternative distance metrics (correlation distance rather than Euclidean)
+
+**Alternative topological invariants:**
+- Persistence images and persistence landscapes (vectorized representations)
+- Mapper graph topology of the correlation network
+- Cubical persistent homology of the correlation matrix as a 2D function
+
+**Alternative universes:**
+- Sector ETFs rather than individual stocks (reduces noise)
+- International equity indices (tests generalization)
+- Credit spreads and rates (different market microstructure)
+
+**Alternative signal constructions:**
+- Continuous position sizing based on z-score magnitude
+- Combining topological features with standard volatility signals
+
+### Connection to ATEAMS
+
+The permutohedral lattice complex studied in ATEAMS provides a natural
+alternative to the Vietoris-Rips complex used here. Permutohedral complexes
+encode correlation structure differently (they do it through the geometry of the
+permutohedron rather than pairwise distance thresholds), and may capture
+topological features of the correlation matrix that Vietoris-Rips misses.
+
+---
+
+---
+
+## Conclusion
+
+We find no statistically significant predictive signal from persistent
+homology features of S&P 500 return point clouds over the period 2004–2024,
+using rigorous multiple comparison correction across four classes of
+statistical tests.
+
+This is a valid and informative scientific result. It does not rule out
+the existence of topological signals in financial data — it rules out the
+specific features and constructions tested here. The methodological
+framework established by this project provides a reproducible baseline
+for future investigation of alternative approaches.
+
+All code, data, and results are publicly available in this repository.
 
 ---
 
