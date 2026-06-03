@@ -4,7 +4,7 @@
 
 Can geometry predict a market crash? This project applies persistent homology to multi-dimensional equity return data to see if topological signatures can detect or predict market stress regimes.
 
-The goal here is to bridge the gap between abstract algebraic topology research and practical quantitative finance by building a rigorous, end-to-end pipeline that extracts Betti number time series from S&P 500 returns and tests their true predictive power over market drawdowns.
+The goal here is to bridge the gap between abstract algebraic topology research and practical quantitative finance by building a pipeline that extracts Betti number time series from S&P 500 returns and tests their true predictive power over market drawdowns.
 
 ---
 
