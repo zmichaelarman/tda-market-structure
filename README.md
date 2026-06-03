@@ -2,23 +2,24 @@
 
 > Applying persistent homology to equity return data to detect topological signatures of market stress regimes.
 
-Investigating whether topological features of S&P 500 return point clouds predict volatility regimes to create a bridge between algebraic topology research and quantitative finance. This project builds a rigorous end-to-end pipeline for extracting Betti number time series from equity returns and testing their predictive power over market drawdowns.
+Can geometry predict a market crash? This project applies persistent homology to multi-dimensional equity return data to see if topological signatures can detect or predict market stress regimes.
 
+The goal here is to bridge the gap between abstract algebraic topology research and practical quantitative finance by building a rigorous, end-to-end pipeline that extracts Betti number time series from S&P 500 returns and tests their true predictive power over market drawdowns.
 ---
 
 ## Background
 
-Most quantitative signals derived from equity data rely on statistical summaries like correlations, volatility estimates, momentum factors. This project asks a different question: does the **shape** of the return distribution, as measured by algebraic topology, carry information about market structure that conventional methods miss?
+Most quantitative signals lean on standard statistical summaries like rolling volatilities, correlation matrices, or momentum factors. This project takes a different angle. Does the geometric shape of the return distribution change before the market breaks?
 
-The mathematical framework comes from **topological data analysis (TDA)**, specifically persistent homology. Given a rolling window of daily returns across a universe of stocks, we construct a point cloud in high-dimensional return space and compute its Vietoris-Rips filtration. The resulting persistence diagrams encode how the topological structure of the market (aka its connected components, loops, and higher-dimensional cycles) evolves through time.
+By treating a rolling window of daily stock returns as a multi-dimensional point cloud, we can use topological data analysis (TDA) to track how the market's underlying geometry (aka: clusters, loops, and voids) evolves over time.
 
-This project was inspired from my research conducted at the [Mason Experimental Geometry Lab](https://megl.science.gmu.edu/), where similar mathematical machinery was applied to spin systems and percolation models in [ATEAMS](https://github.com/apizzimenti/ATEAMS). The translation from statistical physics to financial markets is the core intellectual contribution of this work.
+This project was inspired from my research conducted at the [Mason Experimental Geometry Lab](https://megl.science.gmu.edu/), where similar mathematical machinery was applied to spin systems and percolation models in [ATEAMS](https://github.com/apizzimenti/ATEAMS). This project translates those core mathematical concepts from statistical physics to financial markets & time series.
 
 ---
 
 ## Research Question
 
-> Do Betti numbers and persistence statistics derived from S&P 500 return point clouds carry statistically significant predictive signal over volatility regimes, drawdowns, or market stress events?
+> Do Betti numbers and persistence statistics derived from S&P 500 return point clouds carry statistically significant predictive signals over volatility regimes or market drawdowns/stress events?
 
 Analysis focuses on five historical stress periods as validation anchors:
 
@@ -36,7 +37,7 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 **Point cloud construction.** For each trading day $t$, we take a rolling window of the previous $W = 30$ days of log returns across $N$ stocks. Each day becomes a point in $\mathbb{R}^N$, giving a point cloud $X_t \subset \mathbb{R}^N$ of 30 points. Returns are standardized per-stock within each window, and PCA reduces the ambient dimension to 10 components before computing persistence.
 
-**Persistent homology.** We compute the Vietoris-Rips filtration on $X_t$ using [Ripser](https://github.com/scikit-tda/ripser.py) which is the same class of filtration used in ATEAMS for homological percolation on lattice complexes. The output is a persistence diagram $\text{PD}(X_t)$ encoding the birth and death of topological features across scales.
+**Persistent homology.** We compute the Vietoris-Rips filtration on $X_t$ using [Ripser](https://github.com/scikit-tda/ripser.py) which is used for filtration in homological percolation on lattice complexes. The output is a persistence diagram $\text{PD}(X_t)$ encoding the birth and death of topological features across scales.
 
 ---
 
@@ -74,7 +75,7 @@ none surviving correction.
 
 ## Discussion
 
-### Why the Null Result is Not Surprising
+### The Null Result
 
 The efficient market hypothesis predicts that any predictable signal in
 financial data will be arbitraged away once discovered. The results of
@@ -125,14 +126,6 @@ We find no statistically significant predictive signal from persistent
 homology features of S&P 500 return point clouds over the period 2004–2024,
 using multiple comparison correction across four classes of
 statistical tests.
-
-This is a valid and informative scientific result. It does not rule out
-the existence of topological signals in financial data — it rules out the
-specific features and constructions tested here. The methodological
-framework established by this project provides a reproducible baseline
-for future investigation of alternative approaches.
-
-All code, data, and results are publicly available in this repository.
 
 ---
 
