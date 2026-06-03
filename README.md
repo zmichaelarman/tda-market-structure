@@ -54,8 +54,8 @@ in their raw form. No differencing was required before Granger testing.
 No topological feature showed statistically significant lead-lag correlation
 with any target variable at any tested horizon after FDR correction.
 
-Raw correlations were small in magnitude (|ρ| < 0.08 in all cases),
-consistent with noise rather than a genuine but weak signal.
+Raw correlations were small (|ρ| < 0.08 in all cases),
+consistent with noise rather than a weak signal.
 
 ### Mann-Whitney Stress Tests
 
