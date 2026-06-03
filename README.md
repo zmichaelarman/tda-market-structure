@@ -119,7 +119,8 @@ Each script logs progress and expected runtime to the terminal.
 ---
 
 ## Dependencies
-
+| Library | Version |
+|---|---|
 | `yfinance` | 0.2.51 |
 | `ripser` | 0.6.8 |
 | `persim` | 0.3.8 |
@@ -134,7 +135,7 @@ Each script logs progress and expected runtime to the terminal.
 
 ## Related Work
 
-This project is a inspired by my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS), which is a library for algebraic topology-enabled simulation of spin systems. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
+This project is inspired by my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS), which is a library for algebraic topology-enabled simulation of spin systems. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
 
 ---
 
