@@ -44,19 +44,14 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 ## Results
 
-### Key Findings
+Essentially, all tests point towards there being no signal.
 
-All five topological features were found to be stationary (ADF p < 0.05)
-in their raw form. No differencing was required before Granger testing.
+### Key Findings
 
 * **Stationarity:** All five extracted topological features were found to be stationary in their raw form (ADF $p < 0.05$). No differencing was required before running predictive models.
 * **Spearman Lead-Lag Correlations:** Lead-lag correlations between topological features and forward market targets were uniformly weak ($|\rho| < 0.08$ in all cases) and completely fell within the realm of noise once adjusted for False Discovery Rate (FDR).
 * **Mann-Whitney Stress Tests:** No feature showed statistically significant distributional shifts between stress and non-stress periods after FDR correction. Visual inspection reveals occasional spikes in $H_1$ features around major market crashes, but these are neither systematic nor consistent across all five validation eras.
 * **Granger Causality:** None of the topological features were found to Granger-cause forward realized volatility or the VIX. Raw $p$-values at the best-performing lags ranged from 0.08 to 0.74, meaning none survived multiple-comparison corrections.
-
-
-
-### Essentially, all tests point towards there being no signal.
 
 ---
 
@@ -139,7 +134,7 @@ Each script logs progress and expected runtime to the terminal.
 
 ## Related Work
 
-This project is a inspired from my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS), which is a library for algebraic topology-enabled simulation of spin systems. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
+This project is a inspired by my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS), which is a library for algebraic topology-enabled simulation of spin systems. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
 
 ---
 
