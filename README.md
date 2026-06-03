@@ -85,8 +85,6 @@ dataset with formal correction finds no reliable signal.
 
 ---
 
----
-
 ## Conclusion
 
 We find no statistically significant predictive signal from persistent
