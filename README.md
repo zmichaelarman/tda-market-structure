@@ -38,7 +38,7 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 **Point cloud construction.** For each trading day $t$, we take a rolling window of the previous $W = 30$ days of log returns across $N$ stocks. Each day becomes a point in $\mathbb{R}^N$, giving a point cloud $X_t \subset \mathbb{R}^N$ of 30 points. Returns are standardized per-stock within each window, and PCA reduces the ambient dimension to 10 components before computing persistence.
 
-**Persistent homology.** We compute the Vietoris-Rips filtration on $X_t$ using [Ripser](https://github.com/scikit-tda/ripser.py) which is used for filtration in homological percolation on lattice complexes. The output is a persistence diagram $\text{PD}(X_t)$ encoding the birth and death of topological features across scales.
+**Persistent homology.** I compute the Vietoris-Rips filtration on $X_t$ using [Ripser](https://github.com/scikit-tda/ripser.py). The output is a persistence diagram $\text{PD}(X_t)$ encoding the birth and death of topological features across scales.
 
 ---
 
@@ -49,7 +49,14 @@ Analysis focuses on five historical stress periods as validation anchors:
 All five topological features were found to be stationary (ADF p < 0.05)
 in their raw form. No differencing was required before Granger testing.
 
-Essentially, all tests point towards there being no signal.
+* **Stationarity:** All five extracted topological features were found to be stationary in their raw form (ADF $p < 0.05$). No differencing was required before running predictive models.
+* **Spearman Lead-Lag Correlations:** Lead-lag correlations between topological features and forward market targets were uniformly weak ($|\rho| < 0.08$ in all cases) and completely fell within the realm of noise once adjusted for False Discovery Rate (FDR).
+* **Mann-Whitney Stress Tests:** No feature showed statistically significant distributional shifts between stress and non-stress periods after FDR correction. Visual inspection reveals occasional spikes in $H_1$ features around major market crashes, but these are neither systematic nor consistent across all five validation eras.
+* **Granger Causality:** None of the topological features were found to Granger-cause forward realized volatility or the VIX. Raw $p$-values at the best-performing lags ranged from 0.08 to 0.74, meaning none survived multiple-comparison corrections.
+
+
+
+### Essentially, all tests point towards there being no signal.
 
 ---
 
