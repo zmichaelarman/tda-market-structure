@@ -76,46 +76,12 @@ none surviving correction.
 
 ## Discussion
 
-### The Null Result
-
 The efficient market hypothesis predicts that any predictable signal in
 financial data will be arbitraged away once discovered. The results of
 Gidea and Katz (2018), while visually compelling, were based on a small
 number of events and did not apply the multiple comparison corrections
 that are standard in statistical testing. A more rigorous test on a larger
 dataset with formal correction finds no reliable signal.
-
-### Limitations and Alternative Hypotheses
-
-The negative result is specific to the methodology employed here. Several
-alternative approaches may yield different results and warrant investigation:
-
-**Alternative point cloud constructions:**
-- Correlation matrix entries as the point cloud (rather than return vectors)
-- Sliding windows over intraday data rather than daily returns
-- Alternative distance metrics (correlation distance rather than Euclidean)
-
-**Alternative topological invariants:**
-- Persistence images and persistence landscapes (vectorized representations)
-- Mapper graph topology of the correlation network
-- Cubical persistent homology of the correlation matrix as a 2D function
-
-**Alternative universes:**
-- Sector ETFs rather than individual stocks (reduces noise)
-- International equity indices (tests generalization)
-- Credit spreads and rates (different market microstructure)
-
-**Alternative signal constructions:**
-- Continuous position sizing based on z-score magnitude
-- Combining topological features with standard volatility signals
-
-### Connection to ATEAMS
-
-The permutohedral lattice complex studied in ATEAMS provides a natural
-alternative to the Vietoris-Rips complex used here. Permutohedral complexes
-encode correlation structure differently (they do it through the geometry of the
-permutohedron rather than pairwise distance thresholds), and may capture
-topological features of the correlation matrix that Vietoris-Rips misses.
 
 ---
 
