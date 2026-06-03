@@ -44,33 +44,12 @@ Analysis focuses on five historical stress periods as validation anchors:
 
 ## Results
 
-### Stationarity
+### Key Findings
 
 All five topological features were found to be stationary (ADF p < 0.05)
 in their raw form. No differencing was required before Granger testing.
 
-### Spearman Lead-Lag Correlations
-
-No topological feature showed statistically significant lead-lag correlation
-with any target variable at any tested horizon after FDR correction.
-
-Raw correlations were small (|ρ| < 0.08 in all cases),
-consistent with noise rather than a weak signal.
-
-### Mann-Whitney Stress Tests
-
-No feature showed statistically significant distributional differences
-between stress and non-stress periods after FDR correction.
-
-Visual inspection reveals occasional spikes in H1 features 
-around stress events, but these areneither systematic nor 
-consistent across the five stress periods tested.
-
-### Granger Causality
-
-No feature was found to Granger-cause forward realized volatility or VIX
-after FDR correction. P-values at the best lag ranged from 0.08 to 0.74,
-none surviving correction.
+Essentially, all tests point towards there being no signal.
 
 ---
 
