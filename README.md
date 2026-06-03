@@ -153,7 +153,7 @@ Each script logs progress and expected runtime to the terminal.
 
 ## Related Work
 
-This project is a inspired from my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS), which is a library for algebraic topology-enabled simulation of spin system. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
+This project is a inspired from my work on the repository [ATEAMS](https://github.com/apizzimenti/ATEAMS), which is a library for algebraic topology-enabled simulation of spin systems. ATEAMS applies persistent homology and finite-field linear algebra to study phase transitions in statistical physics. This project applies similar mathematical objects like filtrations, persistence diagrams, and Betti numbers to the geometry of financial markets.
 
 ---
 
@@ -204,5 +204,3 @@ Mathematics, George Mason University (May 2026)
 ```
 
 ---
-
-*Pipeline and results updated continuously as research progresses.*
