@@ -51,37 +51,56 @@ Analysis focuses on five historical stress periods as validation anchors:
 ---
 
 ## Results
-New testing suggests results are slightly off, to be revised soon.
-
-
-Essentially, all tests point towards there being little to no signal.
+the topological features behave as acoincident indicator of
+market stress, not a leading one. They carry statistically 
+significant information about the *current* state of the market, 
+but show no reliable power to forecast forward drawdowns.
 
 ### Key Findings
 
-* **Stationarity:** All five extracted topological features were found to be stationary in their raw form (ADF $p < 0.05$). No differencing was required before running predictive models.
-* **Spearman Lead-Lag Correlations:** Lead-lag correlations between topological features and forward market targets were uniformly weak ($|\rho| < 0.08$ in all cases) and completely fell within the realm of noise once adjusted for False Discovery Rate (FDR).
-* **Mann-Whitney Stress Tests:** No feature showed statistically significant distributional shifts between stress and non-stress periods after FDR correction. Visual inspection reveals occasional spikes in $H_1$ features around major market crashes, but these are neither systematic nor consistent across all five validation eras.
-* **Granger Causality:** None of the topological features were found to Granger-cause forward realized volatility or the VIX. Raw $p$-values at the best-performing lags ranged from 0.08 to 0.74, meaning none survived multiple-comparison corrections.
+* **Contemporaneous structure is strong.** Spearman rank correlations against
+  *same-day* volatility are large and highly significant: H0 total persistence vs.
+  21-day realized volatility reaches ρ = −0.58 (ρ = −0.41 vs. the VIX), with β₁ and
+  H1 entropy near ρ = −0.17. Lower H0 persistence corresponds to a more tightly
+  clustered point cloud — cross-sectional correlations rising as stocks move together.
+
+* **Forward prediction is weak to absent.** Against the actual stress target — forward
+  21-day drawdown — every correlation is negligible (|ρ| < 0.06 at all horizons),
+  even where it clears FDR purely on sample size (n ≈ 5,200). Correlations with
+  forward *volatility* are larger (ρ ≈ −0.22 for H0 persistence) but are driven by the
+  same H0/dispersion term acting as a volatility proxy under volatility clustering.
+
+* **Stress vs. normal distributions.** Mann-Whitney U tests find three of five features
+  shift significantly between stress and non-stress periods after FDR — H0 total
+  persistence, β₁, and H1 entropy (rank-biserial r = 0.34, 0.16, 0.15) — all *lower*
+  during stress. The two purely loop-magnitude features (H1 total / max persistence)
+  do not separate the regimes.
+
+* **Granger causality.** After correcting the forward-volatility target, all five
+  features Granger-predict forward 21-day realized volatility at lag 1 (FDR p < 0.03),
+  but none Granger-predict the VIX. As discussed below, these hits are confounded and
+  do not extend to drawdowns.
+
+* **Out-of-sample backtest.** A z-score timing rule on the strongest feature
+  (H0 total persistence) matches buy-and-hold on held-out data (test Sharpe 0.64 vs.
+  0.65; 11.4% vs. 11.6% annualized) and is marginally worse after 2 bps costs — no
+  exploitable edge.
 
 ---
 
 ## Discussion
 
-The efficient market hypothesis predicts that any predictable signal in
-financial data will be arbitraged away once discovered. The results of
-Gidea and Katz (2018), while visually compelling, were based on a small
-number of events and did not apply the multiple comparison corrections
-that are standard in statistical testing. A more rigorous test on a larger
-dataset with formal correction finds no reliable signal.
+The pipeline show thatpersistent homology of S&P 500 return point 
+clouds detects market stress as ithappens but does not anticipate
+it. Three points explain the pattern.
 
 ---
 
 ## Conclusion
 
-We find no statistically significant predictive signal from persistent
-homology features of S&P 500 return point clouds over the period 2004–2024,
-using multiple comparison correction across four classes of
-statistical tests.
+The results show that persistent homology features of S&P 500 return point clouds track market
+stress contemporaneously but provide no exploitable predictive signal over forward
+drawdowns across the period 2004–2024.
 
 ---
 
