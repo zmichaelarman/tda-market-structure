@@ -64,7 +64,8 @@ but show no reliable power to forecast forward drawdowns.
   H1 entropy near ρ = −0.17. Lower H0 persistence corresponds to a more tightly
   clustered point cloud and cross-sectional correlations rising as stocks move together.
 
-* **Forward prediction is weak to absent.** Against the actual stress target every correlation is
+* **Forward prediction is weak to absent.** Against the actual stress target, the forward
+  21-day drawdown, every correlation is
   negligible (|ρ| < 0.06 at all horizons), even where it clears FDR purely on sample size (n ≈ 5,200). 
   Correlations with forward volatility are larger (ρ ≈ −0.22 for H0 persistence) but are driven by the
   same H0/dispersion term acting as a volatility proxy under volatility clustering.
@@ -86,9 +87,34 @@ but show no reliable power to forecast forward drawdowns.
 
 ## Discussion
 
-The pipeline show thatpersistent homology of S&P 500 return point 
-clouds detects market stress as ithappens but does not anticipate
+The pipeline show that persistent homology of S&P 500 return point 
+clouds detects market stress as it happens but does not anticipate
 it. Three points explain the pattern.
+
+1. **Coincident not leading.** The large correlations are all contemporaneous. The
+   geometry of the return cloud reflects the regime the market is already in; once the
+   targets are pushed into the future, the relationship with drawdowns collapses to noise.
+
+2. **H0 is mostly a volatility proxy.** The strongest feature, H0 total persistence, is
+   effectively a single-linkage measure of cross-sectional dispersion, which moves almost
+   one-for-one with realized volatility. Its apparent "prediction" of forward volatility is
+   the well-known volatility-clustering effect re-expressed through topology, meaning: today's
+   volatility predicting tomorrow's. The distinctively topological signal lives in H1 (loops), 
+   and the H1 features are weak across every forward test.
+
+3. **The Granger results are confounded.** Bivariate Granger tests on forward 21-day
+   volatility do not control for contemporaneous volatility, and the overlapping 21-day
+   target windows are strongly autocorrelated; both inflate significance. The effect
+   appears only for forward volatility (never the VIX or drawdowns) and disappears as
+   an economic signal in the backtest, where even the most strongly correlated feature
+   fails to beat a passive benchmark.
+
+This is consistent with the efficient market hypothesis: information visible in the
+current geometry of returns is already reflected in prices and carries no exploitable
+forward edge. It also contextualizes Gidea and Katz (2018): their visually compelling
+pre-crash persistence spikes are real as coincident descriptions of stress, but on a
+larger sample with multiple-comparison correction and an out-of-sample test, they do not
+constitute a predictive signal over drawdowns.
 
 ---
 
