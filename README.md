@@ -51,8 +51,10 @@ Analysis focuses on five historical stress periods as validation anchors:
 ---
 
 ## Results
+New testing suggests results are slightly off, to be revised soon.
 
-Essentially, all tests point towards there being no signal.
+
+Essentially, all tests point towards there being little to no signal.
 
 ### Key Findings
 
