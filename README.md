@@ -131,15 +131,15 @@ Each script logs progress and expected runtime to the terminal.
 ## Dependencies
 | Library | Version |
 |---|---|
-| `yfinance` | 0.2.51 |
-| `ripser` | 0.6.8 |
+| `yfinance` | 1.2.0 |
+| `ripser` | 0.6.15 |
 | `persim` | 0.3.8 |
-| `scikit-learn` | ≥1.1 |
-| `pandas` | ≥1.5 |
-| `numpy` | ≥1.23 |
-| `scipy` | ≥1.9 |
-| `statsmodels` | ≥0.13 |
-| `matplotlib` | ≥3.6 |
+| `scikit-learn` | 1.1 |
+| `pandas` | 1.5 |
+| `numpy` | 1.23 |
+| `scipy` | 1.9 |
+| `statsmodels` | 0.13 |
+| `matplotlib` | 3.6 |
 
 ---
 
