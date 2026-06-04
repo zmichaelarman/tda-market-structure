@@ -47,8 +47,7 @@ def download_market_data(start, end):
     for H in [5, 21]:
         fwd = (spy_ret.shift(-H)
                        .rolling(H, min_periods=max(3, H // 2))
-                       .std()
-                       .shift(-(H - 1)) * np.sqrt(252))
+                       .std() * np.sqrt(252))
         targets[f"fwd_vol_{H}"] = fwd
     fwd_min = spy_close.rolling(21).min().shift(-21)
     targets["fwd_drawdown_21"] = (fwd_min - spy_close) / spy_close
