@@ -59,33 +59,29 @@ but show no reliable power to forecast forward drawdowns.
 ### Key Findings
 
 * **Contemporaneous structure is strong.** Spearman rank correlations against
-  *same-day* volatility are large and highly significant: H0 total persistence vs.
+  same-day volatility are large and highly significant: H0 total persistence vs.
   21-day realized volatility reaches ρ = −0.58 (ρ = −0.41 vs. the VIX), with β₁ and
   H1 entropy near ρ = −0.17. Lower H0 persistence corresponds to a more tightly
-  clustered point cloud — cross-sectional correlations rising as stocks move together.
+  clustered point cloud and cross-sectional correlations rising as stocks move together.
 
-* **Forward prediction is weak to absent.** Against the actual stress target — forward
-  21-day drawdown — every correlation is negligible (|ρ| < 0.06 at all horizons),
-  even where it clears FDR purely on sample size (n ≈ 5,200). Correlations with
-  forward *volatility* are larger (ρ ≈ −0.22 for H0 persistence) but are driven by the
+* **Forward prediction is weak to absent.** Against the actual stress target every correlation is
+  negligible (|ρ| < 0.06 at all horizons), even where it clears FDR purely on sample size (n ≈ 5,200). 
+  Correlations with forward volatility are larger (ρ ≈ −0.22 for H0 persistence) but are driven by the
   same H0/dispersion term acting as a volatility proxy under volatility clustering.
 
 * **Stress vs. normal distributions.** Mann-Whitney U tests find three of five features
-  shift significantly between stress and non-stress periods after FDR — H0 total
-  persistence, β₁, and H1 entropy (rank-biserial r = 0.34, 0.16, 0.15) — all *lower*
+  shift significantly between stress and non-stress periods after FDR, H0 total
+  persistence, β₁, and H1 entropy (rank-biserial r = 0.34, 0.16, 0.15) are all lower
   during stress. The two purely loop-magnitude features (H1 total / max persistence)
   do not separate the regimes.
 
 * **Granger causality.** After correcting the forward-volatility target, all five
   features Granger-predict forward 21-day realized volatility at lag 1 (FDR p < 0.03),
-  but none Granger-predict the VIX. As discussed below, these hits are confounded and
-  do not extend to drawdowns.
+  but none Granger-predict the VIX.
 
 * **Out-of-sample backtest.** A z-score timing rule on the strongest feature
   (H0 total persistence) matches buy-and-hold on held-out data (test Sharpe 0.64 vs.
-  0.65; 11.4% vs. 11.6% annualized) and is marginally worse after 2 bps costs — no
-  exploitable edge.
-
+  0.65; 11.4% vs. 11.6% annualized) and is marginally worse after 2 bps costs.
 ---
 
 ## Discussion
