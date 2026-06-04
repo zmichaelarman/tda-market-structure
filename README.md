@@ -8,6 +8,14 @@ The goal here is to bridge the gap between abstract algebraic topology research 
 
 ---
 
+## Visualizations
+
+<img width="1823" height="1248" alt="SP500_return_correlation_map" src="https://github.com/user-attachments/assets/47b9707a-135e-4a11-8d8b-3bd6a733be3f" />
+
+<img width="1957" height="1579" alt="Calm_vs_Crisis_return_cloud" src="https://github.com/user-attachments/assets/a1a20fdc-296e-4adc-afbf-105954c2b614" />
+
+---
+
 ## Background
 
 Most quantitative signals lean on standard statistical summaries like rolling volatilities, correlation matrices, or momentum factors. This project takes a different angle. Does the geometric shape of the return distribution change before the market breaks?
